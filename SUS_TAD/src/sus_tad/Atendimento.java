@@ -16,36 +16,59 @@ public class Atendimento {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        int opcao;
-        int nor = 1;
-        int pref = 1;
+        int opcao, atend;
+        int nor = 0;
+        int pref = 0;
         boolean sair = false;
-        Fila normal = new Fila(nor);
-        Fila preferencial = new Fila(pref);
+        Fila normal = new Fila(10);
+        Fila preferencial = new Fila(10);
+
         do {
-            System.out.println("1. Atendimento Normal");
-            System.out.println("2. Atendimento Preferêncial");
+            System.out.println("Clínica Oftalmológica");
+            System.out.println("1. Novo Atendimento");
             System.out.println("0. Sair");
-            opcao = entrada.nextInt();
+            System.out.print("Informe a opção: ");
+            atend = entrada.nextInt();
             entrada.nextLine();
-            System.out.println("Informe o nome do paciente: ");
-            String nome = entrada.nextLine();
-            
-            switch (opcao) {
+
+            switch (atend) {
                 case 1:
-                    normal.enqueue(nome);
-                    nor++;
-                    break;
-                case 2:
-                    preferencial.enqueue(nome);
-                    pref++;
-                    break;
+                    System.out.println("\nTipo de Atendimento");
+                    System.out.println("1. Atendimento Normal");
+                    System.out.println("2. Atendimento Preferêncial");
+                    System.out.print("Informe a opção: ");
+                    opcao = entrada.nextInt();
+                    entrada.nextLine();
+
+                    System.out.print("\nInforme o nome do paciente: ");
+                    String nome = entrada.nextLine();
+
+                    switch (opcao) {
+                        case 1:
+                            nor++;
+                            normal.enqueue(nome);                            
+                            break;
+                        case 2:
+                            pref++;
+                            preferencial.enqueue(nome);                            
+                            break;
+                        default:
+                            System.out.println("Numero Inválido!");
+                    }
                 case 0:
-                    sair = true;
                     break;
+                default:
+                    System.out.println("Numero Inválido!");
             }
 
-        } while (sair = true);
+        } while (atend != 0);
+
+        for (int i = 0; i < nor; i++) {
+            System.out.println(normal.dequeue());
+        }
+        for (int i = 0; i < pref; i++) {
+            System.out.println(preferencial.dequeue());
+        }
 
     }
 }
