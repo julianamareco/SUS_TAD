@@ -5,12 +5,12 @@
  */
 package sus_tad;
 
+
 /**
  *
  * @author Juliana Mareco
  */
 public class Main {
     public static void main(String[] args){
-        
     }
 }

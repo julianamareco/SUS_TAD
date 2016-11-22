@@ -12,16 +12,13 @@ import java.util.Scanner;
  * @author Juliana Mareco
  */
 public class Atendimento {
+    Fila normal = new Fila();
+    Fila preferencial = new Fila();
 
-    public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-
+    public void menu() {
         int opcao, atend;
-        int nor = 0;
-        int pref = 0;
-        boolean sair = false;
-        Fila normal = new Fila(10);
-        Fila preferencial = new Fila(10);
+        
+        Scanner entrada = new Scanner(System.in);
 
         do {
             System.out.println("Clínica Oftalmológica");
@@ -45,12 +42,10 @@ public class Atendimento {
 
                     switch (opcao) {
                         case 1:
-                            nor++;
-                            normal.enqueue(nome);                            
+                            normal.insere(nome);
                             break;
                         case 2:
-                            pref++;
-                            preferencial.enqueue(nome);                            
+                            preferencial.insere(nome);
                             break;
                         default:
                             System.out.println("Numero Inválido!");
@@ -62,13 +57,6 @@ public class Atendimento {
             }
 
         } while (atend != 0);
-
-        for (int i = 0; i < nor; i++) {
-            System.out.println(normal.dequeue());
-        }
-        for (int i = 0; i < pref; i++) {
-            System.out.println(preferencial.dequeue());
-        }
 
     }
 }

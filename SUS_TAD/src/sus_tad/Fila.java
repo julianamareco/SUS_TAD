@@ -5,33 +5,26 @@
  */
 package sus_tad;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Juliana Mareco
  */
 public class Fila {
-    private Object elementos[];
-    private int inicio, fim;
 
-    public Fila(int tam) {
-        this.elementos = new Object[tam];
-        this.inicio = 0;
-        this.fim = -1;
-    }
+  private List<Object> objetos = new LinkedList<Object>();
 
-    public void enqueue(Object e) {
-        if (fim < this.elementos.length) {
-            this.fim++;
-            this.elementos[this.fim] = e;
-        }
-    }
+  public void insere(Object objeto) {
+    this.objetos.add(objeto);
+  }
 
-    public Object dequeue() {
-        if (inicio < this.elementos.length) {
-            Object mesg = this.elementos[this.inicio];
-            this.inicio++;
-            return mesg;
-        }
-        return null;
-    }
+  public Object remove() {
+    return this.objetos.remove(0);
+  }
+
+  public boolean vazia() {
+    return this.objetos.size() == 0;
+  }
 }
