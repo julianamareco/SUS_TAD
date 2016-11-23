@@ -5,6 +5,9 @@
  */
 package sus_tad;
 
+import static sus_tad.Atendimento.menu;
+
+
 
 /**
  *
@@ -12,5 +15,6 @@ package sus_tad;
  */
 public class Main {
     public static void main(String[] args){
+        menu();
     }
 }

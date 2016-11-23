@@ -25,6 +25,6 @@ public class Fila {
   }
 
   public boolean vazia() {
-    return this.objetos.size() == 0;
+    return this.objetos.isEmpty();
   }
 }

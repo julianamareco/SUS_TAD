@@ -12,12 +12,12 @@ import java.util.Scanner;
  * @author Juliana Mareco
  */
 public class Atendimento {
-    Fila normal = new Fila();
-    Fila preferencial = new Fila();
 
-    public void menu() {
+    public static void menu() {
+        Fila normal = new Fila();
+        Fila preferencial = new Fila();
         int opcao, atend;
-        
+
         Scanner entrada = new Scanner(System.in);
 
         do {
@@ -57,6 +57,9 @@ public class Atendimento {
             }
 
         } while (atend != 0);
-
+        
+        Recepcao instancia = new Recepcao();
+        instancia.GuicheNormal(normal);
     }
+
 }
