@@ -1,11 +1,13 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package sus_tad;
 
-import static sus_tad.Atendimento.menu;
+import static sus_tad.Atendimento.Atendimento;
+
+
 
 
 
@@ -15,6 +17,6 @@ import static sus_tad.Atendimento.menu;
  */
 public class Main {
     public static void main(String[] args){
-        menu();
+        Atendimento();
     }
 }
