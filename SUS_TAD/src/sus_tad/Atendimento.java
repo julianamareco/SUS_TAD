@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sus_tad;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Juliana Mareco
- */
 public class Atendimento {
-
+/**
+ * Metodo de atendimento onde são separados os pacientes em atendimento normal ou preferencial.
+ * Aonde pode ir para os guiches para separar em outras 3 filas
+ */
     public static void Atendimento() {
         Fila normal = new Fila();
         Fila preferencial = new Fila();

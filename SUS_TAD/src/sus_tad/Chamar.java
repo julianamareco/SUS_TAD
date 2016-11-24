@@ -1,19 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sus_tad;
 
 import java.util.Scanner;
 import static sus_tad.Atendimento.Atendimento;
 
-/**
- *
- * @author Juliana Mareco
- */
-public class Chamar {
 
+public class Chamar {
+/**
+ * Metodo que chama os pacientes dependendo da fila escolhida
+ * @param consulta Fila primeira consulta
+ * @param retorno Fila retorno
+ * @param especialidade Fila especialidade do dia
+ */
     public void Chamar(Fila consulta, Fila retorno, Fila especialidade) {
         Scanner entrada = new Scanner(System.in);
         boolean sair = false;

@@ -1,23 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sus_tad;
 
 import java.util.Scanner;
 import static sus_tad.Atendimento.Atendimento;
 
-/**
- *
- * @author Juliana Mareco
- */
 public class Recepcao {
 
     Fila consulta = new Fila();
     Fila retorno = new Fila();
     Fila especialidade = new Fila();
-
+    
+    /**
+     * Metodo que pega a fila normal e separa em primeira consulta, retorno ou especialidade do dia
+     * @param normal Fila normal
+     */
     public void GuicheNormal(Fila normal) {
         Scanner entrada = new Scanner(System.in);
 
@@ -64,6 +59,10 @@ public class Recepcao {
 
     }
 
+    /**
+     * Metodo que pega a fila preferencial e separa em primeira consulta, retorno ou especialidade do dia
+     * @param preferencial Fila preferencial
+     */
     public void GuichePreferencial(Fila preferencial) {
         Scanner entrada = new Scanner(System.in);
 
@@ -102,6 +101,12 @@ public class Recepcao {
 
     }
 
+    /**
+     * Metodo que seleciona qual o guiche deseja abrir
+     * Aonde podemos ir para a parte de chamar os pacientes
+     * @param normal
+     * @param preferencial 
+     */
     public void Guiche(Fila normal, Fila preferencial) {
         Scanner entrada = new Scanner(System.in);
         boolean sair = false;
